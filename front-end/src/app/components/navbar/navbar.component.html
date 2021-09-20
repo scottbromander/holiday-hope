@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-default">
+  <div class="container">
+    <a class="navbar-brand" href="javascript:;"> Holiday Hope </a>
+    <button
+      aria-controls="navbar-primary"
+      aria-label="Toggle navigation"
+      class="navbar-toggler"
+      [attr.aria-expanded]="!isCollapsed"
+      (click)="isCollapsed = !isCollapsed"
+      id="navbar-primary"
+      type="button"
+    >
+      <span class="navbar-toggler-icon"> </span>
+    </button>
+    <div
+      class="navbar-collapse"
+      [isAnimated]="true"
+      [collapse]="isCollapsed"
+      id="navbar-primary"
+    >
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a href="./index.html">
+              <img src="assets/img/brand/blue.png" />
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button
+              aria-controls="navbar-primary"
+              aria-label="Toggle navigation"
+              class="navbar-toggler"
+              [attr.aria-expanded]="!isCollapsed"
+              (click)="isCollapsed = !isCollapsed"
+              id="navbar-primary"
+              type="button"
+            >
+              <span> </span> <span> </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="navbar-nav ml-lg-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:;">
+            Discover <span class="sr-only"> (current) </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:;"> Profile </a>
+        </li>
+        <li class="nav-item dropdown" dropdown>
+          <a
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="nav-link dropdown-toggle dropdown-toggle"
+            data-toggle="dropdown"
+            dropdownToggle
+            href="javascript:;"
+            id="navbar-primary_dropdown_1"
+            role="button"
+          >
+            Settings
+          </a>
+          <div
+            aria-labelledby="navbar-primary_dropdown_1"
+            class="dropdown-menu dropdown-menu-right"
+            *dropdownMenu
+          >
+            <a class="dropdown-item" href="javascript:;"> Action </a>
+            <a class="dropdown-item" href="javascript:;">
+              Another action
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:;">
+              Something else here
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
